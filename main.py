@@ -3,9 +3,10 @@ from dotenv import load_dotenv
 from litellm import completion
 
 load_dotenv()
-
+os.getenv("GOOGLE_API_KEY")
+model = os.getenv("model","gemini/gemini-2.5-flash")
 response = completion(
-    model="gemini/gemini-2.5-flash",
+    model=model,
     messages=[
         {
             "role":"user",
