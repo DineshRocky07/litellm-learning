@@ -13,7 +13,14 @@ router = Router(
             "model": "gemini/gemini-2.5-flash",
             "api_key": os.getenv("GOOGLE_API_KEY")
         }
-    }
+    },
+    {
+            "model_name":"gemini",
+            "litellm_params": {
+                "model": "gemini/gemini-2.5-flash-lite",
+                "api_key": os.getenv("GOOGLE_API_KEY")
+            }
+        }
     ]
 )
 

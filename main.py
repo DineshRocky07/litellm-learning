@@ -24,4 +24,6 @@ response = completion(
 
 )
 
-print(response.choices[0].message.content)
+print("Requested model: gemini")
+print("Actual model:", response.model)
+print("Answer:", response.choices[0].message.content)
